@@ -58,6 +58,16 @@ const rollDice = (dice,rolls,bonus,eachRoll) => {
     }
 
     history += ` = ${sum}`;
-    
-    update(sum, history);
+
+    updateUI(sum, history);
+};
+
+const getBonus = bonus => {
+    return bonus !== 0 ? ` + (${bonus}) ` : '';
+};
+
+const updateUI = (sum, history) => {
+    //append history to the collapsible
+
+    //ANIMATION
 };
