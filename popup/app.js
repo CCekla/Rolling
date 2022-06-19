@@ -5,8 +5,9 @@ const list = document.querySelector('.carousel__list');
 const cards = document.querySelectorAll('.carousel__item');
 
 list.addEventListener('click', event => {
+    let item = event.target.closest('.carousel__item');
 
-    update(event.target.dataset.pos);
+    update(item.dataset.pos);
 
 });
 

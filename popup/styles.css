@@ -1,6 +1,6 @@
 body {
-    margin:0;
-    padding:0;
+  margin: 0;
+  padding: 0;
   width: 480px;
   height: 600px;
   font-family: 'Nunito', sans-serif;
@@ -23,6 +23,22 @@ body {
   text-align: center;
 }
 
+header {
+  box-shadow: none;
+  background: rgb(244, 143, 177);
+  background: linear-gradient(
+    22deg,
+    rgba(244, 143, 177, 0.75) 0%,
+    rgba(106, 27, 154, 0.75) 75%
+  );
+  color: white;
+}
+
+h1 {
+    margin:0;
+    padding:.75rem;
+}
+
 /*===custom carousel classes*/
 .carousel__container {
   display: flex;
@@ -34,7 +50,7 @@ body {
   display: flex;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 130px;
   justify-content: center;
   perspective: 300px;
 }
@@ -44,26 +60,32 @@ body {
   justify-content: center;
   color: #fff;
   font-size: 0px;
-  min-width: 150px;
-  min-height: 250px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  min-width: 128px;
+  min-height: 128px;
   position: absolute;
   transition: all 0.3s ease-in;
 }
+
 .carousel__item[data-pos='0'] {
   z-index: 4;
 }
 .carousel__item[data-pos='-1'],
-.carousel-item[data-pos='1'] {
+.carousel__item[data-pos='1'] {
   z-index: 3;
-  opacity: 0.7;
+  opacity: 0.5;
 }
+
 .carousel__item[data-pos='-1'] {
-  transform: translateX(-80%) scale(0.9);
+  transform: translateX(-60%) scale(0.8);
 }
 .carousel__item[data-pos='1'] {
-  transform: translateX(80%) scale(0.9);
+  transform: translateX(60%) scale(0.8);
+}
+.carousel__item[data-pos='2'],
+.carousel__item[data-pos='-2'],
+.carousel__item[data-pos='3'],
+.carousel__item[data-pos='-3'] {
+  opacity: 0;
 }
 
 .number-input input[type='number']::-webkit-inner-spin-button,
@@ -72,7 +94,7 @@ body {
 }
 .number-input {
   display: inline-flex;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .number-input,
@@ -81,7 +103,7 @@ body {
 }
 
 .form-label {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .number-input button {
@@ -104,7 +126,7 @@ body {
   display: inline-block;
   position: absolute;
   content: '';
-  width: .75em;
+  width: 0.75em;
   height: 2px;
   background-color: #212121;
   transform: translate(-50%, -50%);
@@ -124,6 +146,39 @@ body {
   font-weight: bold;
   text-align: center;
   border: none;
+}
+/*checkbox input*/
+.form-check-label {
+  display: block;
+  position: relative;
+  padding-left: 1.75rem;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Hide the default checkbox */
+.form-check-label input {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.form-check-label:hover input ~ .box {
+  background-color: rgb(244,143,177,0.75);
+}
+
+.form-check-label input:checked ~ .box {
+  background-color: rgba(106,27,154,0.75);
 }
 
 /* nunito-regular - latin */
