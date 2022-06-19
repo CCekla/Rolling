@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roller</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -27,24 +27,32 @@
             </div>
         </div>
 
-        <form class="g-5" id="roll">
+        <form id="roll">
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="bonus" class="form-label">Add</label>
-                    <input type="number" class="form-control" name="bonus" id="bonus" value="0">
+                    <label for="bonus" class="form-label">Mod</label>
+                    <div class="number-input">
+                        <button class="minus"></button>
+                        <input type="number" class="form-control" name="bonus" id="bonus" value="0">
+                        <button class="plus"></button>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <label for="rolls" class="form-label">Rolls</label>
-                    <input type="number" class="form-control" name="rolls" id="rolls" value="1" min="1">
+                    <div class="number-input">
+                        <button class="minus"></button>
+                        <input type="number" class="form-control" name="rolls" id="rolls" value="1" min="1">
+                        <button class="plus"></button>
+                    </div>
                 </div>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="eachRoll">
                 <label class="form-check-label" for="eachRoll">
-                    Add mod to each roll
+                    Set modifier for each roll
                 </label>
             </div>
-            <div class="col-12 text-center">
+            <div class="text-center">
                 <button type="submit" class="btn btn-primary" for="roll">Roll</button>
             </div>
         </form>

@@ -20,6 +20,20 @@ const update = active => {
     });
 };
 
+//INPUT NUMBER + -
+const minus = document.querySelectorAll('.minus');
+const plus = document.querySelectorAll('.plus');
+
+minus.forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    e.target.nextElementSibling.stepDown();
+}));
+
+plus.forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    e.target.previousElementSibling.stepUp();
+}));
+
 //GETTING DATA
 
 const form = document.querySelector('form');
