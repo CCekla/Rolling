@@ -44,8 +44,10 @@ const rollDice = (dice,rolls,bonus,eachRoll) => {
     for(let i = 0; i < rolls; i++){
         let num = Math.floor(Math.random() * dice) + 1;
 
+        history += ` ${num}`;
+
         if(eachRoll.checked){
-            history += ` ${num} ${getBonus(bonus)}`;
+            history += `${getBonus(bonus)}`;
             num += bonus;
         }
 
@@ -58,16 +60,31 @@ const rollDice = (dice,rolls,bonus,eachRoll) => {
     }
 
     history += ` = ${sum}`;
+    
+    console.log(history);
 
     updateUI(sum, history);
 };
 
 const getBonus = bonus => {
-    return bonus !== 0 ? ` + (${bonus}) ` : '';
+    return bonus !== 0 ? ` + (${bonus}),` : '';
 };
 
 const updateUI = (sum, history) => {
+    const result = document.getElementById('result');
     //append history to the collapsible
 
+    
     //ANIMATION
+    let output = 0;
+
+    const timer = setInterval(() => {
+        result.textContent = output + '';
+
+        if(output === sum){
+            clearInterval(timer);
+        }else{
+            output++;
+        }
+    }, 10);
 };

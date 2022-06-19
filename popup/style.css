@@ -9868,6 +9868,12 @@ fieldset:disabled .btn {
   }
 }
 
+/*====PERSONAL CSS */
+body {
+  width: 800px;
+  height: 600px;
+}
+
 /*===custom carousel classes*/
 .carousel__container {
     display: flex;
