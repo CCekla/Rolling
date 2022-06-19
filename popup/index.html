@@ -12,17 +12,17 @@
 <body>
     <main>
         <header>
-            <h1>Dice Roller</h1>
+            <h1 class="text-center">Dice Roller</h1>
         </header>
 
         <div class="carousel__container">
             <div class="carousel__list">
                 <div class="carousel__item" data-pos="0" data-dice="20" style="background-color:red"></div>
                 <div class="carousel__item" data-pos="1" data-dice="12" style="background-color:blue"></div>
-                <div class="carousel__item" data-pos="2" data-dice="100" style="background-color:green"></div>
-                <div class="carousel__item" data-pos="3" data-dice="6" style="background-color:yellow"></div>
+                <div class="carousel__item" data-pos="2" data-dice="10" style="background-color:green"></div>
+                <div class="carousel__item" data-pos="3" data-dice="100" style="background-color:yellow"></div>
                 <div class="carousel__item" data-pos="-3" data-dice="8" style="background-color:pink"></div>
-                <div class="carousel__item" data-pos="-2" data-dice="10" style="background-color:orange"></div>
+                <div class="carousel__item" data-pos="-2" data-dice="6" style="background-color:orange"></div>
                 <div class="carousel__item" data-pos="-1" data-dice="4" style="background-color:purple"></div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <label for="rolls" class="form-label">Rolls</label>
+                    <label for="rolls" class="form-label">Number of rolls</label>
                     <div class="number-input">
                         <button class="minus"></button>
                         <input type="number" class="form-control" name="rolls" id="rolls" value="1" min="1">
@@ -59,7 +59,9 @@
 
         <div class="text-center" id="result"></div>
 
-        <div id="history"></div>
+        <details id="history">
+            <summary>Rolls history</summary>
+        </details>
 
     </main>
     <script src="app.js"></script>

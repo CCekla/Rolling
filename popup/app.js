@@ -53,7 +53,7 @@ form.addEventListener('submit', event => {
 
 const rollDice = (dice,rolls,bonus,eachRoll) => {
     let sum = 0;
-    let history = '';
+    let history = ``;
 
     for(let i = 0; i < rolls; i++){
         let num = Math.floor(Math.random() * dice) + 1;
@@ -86,8 +86,11 @@ const getBonus = bonus => {
 
 const updateUI = (sum, history) => {
     const result = document.getElementById('result');
+    const rollsHistory = document.getElementById('history');
     //append history to the collapsible
-
+    let elem = document.createElement("p");
+    elem.append(history);
+    rollsHistory.append(elem);
     
     //ANIMATION
     let output = 0;
