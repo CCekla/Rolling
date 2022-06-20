@@ -19,6 +19,7 @@
             <div class="carousel__list">
                 <div class="carousel__item" data-pos="0" data-dice="20">
                     <img src="img/twenty.png" alt="d20 dice">
+                    <p>d20</p>
                 </div>
                 <div class="carousel__item" data-pos="1" data-dice="12">
                     <img src="img/twelve.png" alt="d12 dice">
@@ -42,16 +43,16 @@
         </div>
 
         <form id="roll">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="bonus" class="form-label">Mod</label>
+            <div class="row">
+                <div class="col">
+                    <label for="bonus" class="form-label">Modifier</label>
                     <div class="number-input">
                         <button class="minus"></button>
                         <input type="number" class="form-control" name="bonus" id="bonus" value="0">
                         <button class="plus"></button>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col">
                     <label for="rolls" class="form-label">Number of rolls</label>
                     <div class="number-input">
                         <button class="minus"></button>
@@ -63,13 +64,13 @@
             <div class="form-check">
                 
                 <label class="form-check-label" for="eachRoll">
-                    Set modifier for each roll
+                    Set mod for each roll
                     <input class="form-check-input" type="checkbox" value="" id="eachRoll">
                     <span class="box"></span>
                 </label>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary" for="roll">Roll</button>
+                <button type="submit" class="btn" for="roll">Roll</button>
             </div>
         </form>
 

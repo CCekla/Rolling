@@ -1,22 +1,31 @@
+html {
+  max-width: 480px;
+}
 body {
   margin: 0;
   padding: 0;
-  width: 480px;
-  height: 600px;
   font-family: 'Nunito', sans-serif;
+}
+
+main {
+  max-height: 600px;
+  overflow: scroll;
+  scrollbar-color: rgba(92, 172, 191, 0.75) transparent;
+  scrollbar-width: thin;
 }
 
 .row {
   display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
 }
 
-.col-md-6 {
+.col {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex: 0 0 auto;
-  align-items: space-between;
-  width: 50%;
 }
 
 .text-center {
@@ -32,11 +41,13 @@ header {
     rgba(106, 27, 154, 0.75) 75%
   );
   color: white;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-    margin:0;
-    padding:.75rem;
+  margin: 0;
+  padding: 0.75rem;
+  font-weight: 900;
 }
 
 /*===custom carousel classes*/
@@ -45,12 +56,13 @@ h1 {
   width: 100%;
   height: 100%;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 .carousel__list {
   display: flex;
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 96px;
   justify-content: center;
   perspective: 300px;
 }
@@ -58,12 +70,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   font-size: 0px;
-  min-width: 128px;
-  min-height: 128px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   transition: all 0.3s ease-in;
+}
+
+.carousel__item img {
+  width: 100%;
+  height: auto;
 }
 
 .carousel__item[data-pos='0'] {
@@ -88,6 +104,8 @@ h1 {
   opacity: 0;
 }
 
+/*INPUT STYLES*/
+
 .number-input input[type='number']::-webkit-inner-spin-button,
 .number-input input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -95,6 +113,7 @@ h1 {
 .number-input {
   display: inline-flex;
   margin-bottom: 0.75rem;
+  width: max-content;
 }
 
 .number-input,
@@ -103,7 +122,11 @@ h1 {
 }
 
 .form-label {
+  display: inline;
+  width: max-content;
   margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 .number-input button {
@@ -112,13 +135,19 @@ h1 {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
   margin: 0;
   position: relative;
+}
+
+.number-input button:hover {
+  background-color: #5cacbf;
+}
+
+.number-input button:hover:before,.number-input button:hover:after {
+  background-color: white;
 }
 
 .number-input button:before,
@@ -143,17 +172,22 @@ h1 {
   padding: 0.5rem;
   font-size: 1em;
   height: 1.5rem;
-  font-weight: bold;
   text-align: center;
   border: none;
 }
 /*checkbox input*/
+.form-check {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 1.75rem;
+}
+
 .form-check-label {
   display: block;
   position: relative;
   padding-left: 1.75rem;
   cursor: pointer;
-  font-size: 1em;
+  font-size: .9em;
 }
 
 /* Hide the default checkbox */
@@ -170,15 +204,66 @@ h1 {
   height: 1em;
   width: 1em;
   border: 1px solid lightgray;
+  border-radius: 5px;
   background-color: white;
 }
 
 .form-check-label:hover input ~ .box {
-  background-color: rgb(244,143,177,0.75);
+  background-color: rgb(244, 143, 177, 0.75);
 }
 
 .form-check-label input:checked ~ .box {
-  background-color: rgba(106,27,154,0.75);
+  background-color: rgba(106, 27, 154, 0.75);
+}
+
+.btn {
+  padding: 10px 18px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(106, 27, 154, 0.75);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(244, 143, 177, 0.75);
+}
+
+#result {
+  border-bottom: 3px solid #9fd9ee;
+  margin: 0 auto 1.5rem;
+  font-size: 3em;
+  width: 25%;
+  height: 70px;
+}
+
+/*History*/
+#history {
+  width: 60%;
+  margin: 0 auto;
+  border: 2px solid #fccc93;
+  border-radius: 5px;
+}
+
+summary {
+  background: #fccc93;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#history[open] summary {
+  margin-bottom: 1rem;
+}
+
+#history p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  font-size: .9em;
 }
 
 /* nunito-regular - latin */
