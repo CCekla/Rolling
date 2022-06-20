@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Dice Rolling",
+    "version": "1.0",
+    "description": "A dice roller app. You can choose the dice, the modifier to add to the final result or to each roll and how many times the dice must roll. For RPGs and tabletop games.",
+    "homepage_url": "",
+    "icons": {
+        "48": "icons/dice-48.png",
+        "96": "icons/dice-96.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "icons/dice-32.png",
+        "default_title": "Dice Rolling",
+        "default_popup": "popup/index.html"
+    }
+}
