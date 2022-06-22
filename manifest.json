@@ -3,7 +3,7 @@
     "name": "Dice Rolling",
     "version": "1.0",
     "description": "A dice roller app. You can choose the dice, the modifier to add to the final result or to each roll and how many times the dice must roll. For RPGs and tabletop games.",
-    "homepage_url": "",
+    "homepage_url": "https://github.com/CCekla/Rolling",
     "icons": {
         "48": "icons/dice-48.png",
         "96": "icons/dice-96.png"
