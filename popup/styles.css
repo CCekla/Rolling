@@ -1,5 +1,5 @@
 html {
-  max-width: 480px;
+  max-width: 420px;
 }
 body {
   margin: 0;
@@ -17,7 +17,7 @@ main {
 .row {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -177,7 +177,7 @@ h1 {
 }
 /*checkbox input*/
 .form-check {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding-bottom: 1.75rem;
 }
@@ -242,7 +242,7 @@ h1 {
 
 /*History*/
 #history {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
   border: 2px solid #fccc93;
   border-radius: 5px;
